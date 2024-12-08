@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import './header.css'
 
 export const Header = ()=>{
@@ -11,11 +11,20 @@ const [isModalOpen, setIsModalOpen]= useState(false);
 const openModal = () => setIsModalOpen(true);
 const closeModal = () => setIsModalOpen(false);
     
+useEffect(()=>{
+if(isModalOpen){
+    document.body.classList.add('modal-open');
+}
+if(!isModalOpen){
+    document.body.classList.remove('modal-open');
+}
+}, [isModalOpen]);
+
 return(
     <header>
         <div className="header-container">
             <div className="header-first">
-                <h2 className="header-logo">CRYPTO<span className="header-logo-part">GEEK</span></h2>
+                <h2 className="header-logo">crypto<span className="header-logo-part">geek</span></h2>
             </div>
             <div className="header-midle">
                 <ul className="header-list">
@@ -45,8 +54,8 @@ return(
                         </ul>
                     )}
                     </li>
-                    <li className="header-list-item">Feed</li>
-                    <li className="header-list-item">Tools</li>
+                    <li className="header-list-item"><a href=""> Feed</a></li>
+                    <li className="header-list-item"><a href="">Tools</a></li>
                 </ul>
             </div>
             <div className="header-end">
@@ -62,10 +71,11 @@ return(
                 </div>
             </div>
             {isModalOpen &&(
-            <div className="modal">
+                <div className="backdrop" onClick={closeModal}>
+            <div className="modal" onClick={(e) => e.stopPropagation()}>
                 <div className="header-modal">
                     <h3 className="modal-title">Sing In</h3>
-                    <button onClick={closeModal}>
+                    <button onClick={closeModal} className="close-modal-btn">
                  <svg width="28px" height="28px" className="modal-close-icon">
                     <use href="/images/icons.svg#icon-x-mark"/>
                  </svg>
@@ -84,8 +94,8 @@ return(
                 <button className="modal-link">Sent login link</button>
                 <button className="google-modal">
                     <svg width="15px" height="15px" className="google-login-icon">
-                        <use href="/images/icons.svg#icon-google"/>
-                    </svg>
+                        <use href="../../../public/images/icons.svg#icon-google"/>
+                    </svg><p className="google-enter">Or sing in with google</p>
                 </button>
               </div>
                     </form>
@@ -112,6 +122,7 @@ return(
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
             )}
         </div>
