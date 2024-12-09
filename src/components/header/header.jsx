@@ -7,7 +7,7 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
-import 'react-accessible-accordion/dist/fancy-example.css';
+// import 'react-accessible-accordion/dist/fancy-example.css';
 
 
 export const Header = ()=>{
@@ -89,6 +89,11 @@ return(
                 <div className="sing-in">
                     <button onClick={openModal} className="sing-btn">Sing in</button>
                 </div>
+                <button className="menu-button" onClick={openMenu}>
+            <svg width="30px" height="30px" className="menu-header-icon">
+                <use href="./images/icons.svg#icon-menu"/>
+            </svg>
+            </button>
             </div>
             {isModalOpen &&(
                 <div className="backdrop" onClick={closeModal}>
@@ -145,22 +150,26 @@ return(
             </div>
             </div>
             )}
-               <button className="menu-button" onClick={openMenu}>
-            <svg width="30px" height="30px" className="menu-header-icon">
-                <use href="./images/icons.svg#icon-menu"/>
-            </svg>
-            </button>
+              
 {isMenuOpen &&(
             <div className="mobile-menu-header">
+                <div className="mobile-menu-head">
+                <div className="header-first">
+                <h2 className="header-logo">crypto<span className="header-logo-part">geek</span></h2>
+            </div>
+            <div>
             <button  className="close-menu-btn" onClick={closeMenu}>
                  <svg width="28px" height="28px" className="menu-close-icon">
                     <use href="/images/icons.svg#icon-x-mark"/>
                  </svg>
                  </button>
+                 </div>
+                </div>
+         
                 <nav>
           <ul className="head-menu-mobile">
           <li className="head-menu-mob-item"><a href="">Academy</a></li>
-            <li>
+            <li className="head-menu-mob-item">
             <Accordion allowZeroExpanded>
             <AccordionItem>
               <AccordionItemHeading>

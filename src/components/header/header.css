@@ -1,243 +1,363 @@
+
 .header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #e5e0a6;
-    padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e5e0a6;
+  
+  padding: 10px;
 }
 
 .header-logo {
-    color: blueviolet; 
-    font-weight: 700; /* Зробимо трохи товщим */
+  background: linear-gradient(to right, blueviolet, #DDA0DD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500; 
 }
 
-.header-logo-part {
-    color:  #DDA0DD; 
+.header-end{
+  display: flex;
+  gap: 10px;
 }
+
+.menu-button {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.menu-header-icon {
+  fill: blueviolet;
+}
+
+.sing-in {
+ display: block;
+  
+
+}
+
+
 
 .header-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+  display: none; 
+}
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  width: 300px;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 999;
+}
+
+.header-modal{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 90px;
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  color: #4C164E;
+  text-align: center;
+  font-weight: 550;
+  font-size: 23px;
+}
+
+.modal-close-icon {
+ fill: #e5e0a6;
+ 
+}
+
+.close-modal-btn{
+width: 35px;
+height: 30px;
+background-color: #4C164E;
+transition: background-color 250ms ease;
+border-radius: 10px;
+border: none;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.close-modal-btn:hover {
+  background-color: #DDA0DD;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-input {
+  border: 2px solid #8A2BE2;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border 250ms ease;
+}
+
+.modal-input:hover{
+  border: 2px solid #DDA0DD;
+}
+
+.modal-input:focus{
+  border: 2px solid #DDA0DD;
+}
+
+
+.form-btns{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.google-modal, .modal-link {
+  background-color: #4C164E;
+  color: #FFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.google-modal:hover, .modal-link:hover {
+  background-color: #DDA0DD;
+}
+
+.walet-modal-title{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ border-bottom: 1px solid #DDA0DD;
+ margin-bottom: 10px; 
+}
+
+.wallets-selection{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.metamask-btn, .other-wallets-btn {
+  background-color: #4C164E;
+  color: #FFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  transition: background-color 0.3s ease;
+}
+
+.metamask-btn:hover, .other-wallets-btn:hover {
+  background-color: #DDA0DD;
+}
+.mobile-menu-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e5e0a6; 
+  z-index: 1000;
+  padding: 20px;
+
+ 
+  /* overflow-y: auto; */
+}
+
+
+
+.mobile-menu-header {
+
+  padding: 15px 10px;
+}
+
+.mobile-menu-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.close-menu-btn {
+  background: none;
+  border: none;
+}
+.menu-close-icon {
+  fill: #8A2BE2;
+}
+
+.menu-close-icon:hover{
+fill: #DDA0DD;
+}
+
+.head-menu-mobile {
+display: flex;
+flex-direction: column;
+align-items: start;
+justify-content: center;
+border: 1px solid #DDA0DD;
+  padding: 20px;
+gap: 25px;
+width: auto;
+height: auto;
+
+
+}
+
+.head-menu-mob-item {
+  color: #483D8B;
+  font-size: 18px;
+  font-size: 400;
+}
+
+.head-menu-mob-item:hover  {
+color: #8A2BE2;
+}
+
+.submenu-mobile-header {
+
+  padding: 10px;
+  border: 1px solid #DDA0DD; 
+  border-radius: 5px;
+  margin-top: 10px;
+  width: auto;
+}
+
+.submenu-mobile-item {
+  margin-bottom: 10px;
+  color: #8A2BE2;
+}
+
+
+.sing-in .sing-btn {
+  background-color: #8A2BE2;
+  color: #FFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sing-in .sing-btn:hover {
+  background-color: #D8BFD8; 
+}
+
+
+body.modal-open {
+  background-color: #F5F3FF; 
+  overflow: hidden; 
+  pointer-events: none; 
+}
+
+body.modal-open .modal,
+body.modal-open .backdrop {
+  pointer-events: auto; 
+}
+
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 998;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  
+  .mobile-menu-header {
+      display: none; 
+  }
+  .menu-button {
+    display: none;
+  }
+
+.header-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .header-list-item  {
-    color:  blueviolet;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  color:  blueviolet;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .header-list-item :hover {
-    color: #DDA0DD; /* plum */
+  color: #DDA0DD; 
 }
 
 .header-menu {
-    position: absolute;
-    top: 13%; 
-    left: 0;
-    width: 100%; 
-    background-color: #483D8B; /* darkslateblue */
-    opacity: 0; 
-    transform: translateY(-10px); 
-    visibility: hidden; 
-    transition: opacity 5s ease-in-out, transform 5s ease-in-out; 
-    transition-duration: 5s;
-    transition-timing-function: 10s;
-    z-index: 100; 
-    display: flex;
-    gap: 10px;
+  position: absolute;
+  top: 13%; 
+  left: 0;
+  width: 100%; 
+  background-color: #483D8B; 
+  opacity: 0; 
+  transform: translateY(-10px); 
+  visibility: hidden; 
+  transition: opacity 5s ease-in-out, transform 5s ease-in-out; 
+  transition-duration: 5s;
+  transition-timing-function: 10s;
+  z-index: 100; 
+  display: flex;
+  gap: 10px;
 }
 
 .header-menu.visible {
-    opacity: 1; 
-    transform: translateY(5); 
-    visibility: visible; 
+  opacity: 1; 
+  transform: translateY(5); 
+  visibility: visible; 
 }
 
 
 .header-menu-item {
-  
-    padding: 20px;
+
+  padding: 20px;
 }
 
 .header-menu-div {
-    border: 1px solid rgb(160, 76, 238);
-    border-radius: 10px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
+  border: 1px solid rgb(160, 76, 238);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hover-menu-title {
-    color: #EEE8AA; /* palegoldenrod */
-    font-size: 18px;
-    font-weight: 400;
+  color: #EEE8AA; 
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .hover-menu-p {
-    color: #F8F8FF; /* ghostwhite */
-    font-size: 16px;
+  color: #F8F8FF; 
+  font-size: 16px;
 }
 
-.sing-in .sing-btn {
-    background-color: #8A2BE2; /* blueviolet */
-    color: #FFF;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
-
-.sing-in .sing-btn:hover {
-    background-color: #D8BFD8; /* thistle */
-}
-
-/* Ставимо цей клас на body, коли модальне вікно відкрите */
-body.modal-open {
-    background-color: #F5F3FF !important; /* Зміна фону сторінки */
-    overflow: hidden; /* Заборона скролу */
-    pointer-events: none; /* Заборона взаємодії з усіма елементами, крім модального вікна */
-  }
-  
-  body.modal-open .modal,
-  body.modal-open .backdrop {
-    pointer-events: auto; /* Дозволяємо взаємодію тільки з модальним вікном */
-  }
-  
-  /* Стилі для затемнення фону */
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Прозорий чорний фон */
-    z-index: 998;
-  }
-  
-  /* Стилі для модального вікна */
-  .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #FFF;
-    width: 300px;
-    border-radius: 10px;
-    padding: 20px;
-    z-index: 999;
-  }
-  
-.header-modal{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    gap: 90px;
-    margin-bottom: 10px;
-}
-
-  .modal-title {
-    color: #4C164E;
-    text-align: center;
-    font-weight: 550;
-    font-size: 23px;
-  }
-  
-  .modal-close-icon {
-   fill: #e5e0a6;
-   
-  }
-  
-.close-modal-btn{
-  width: 35px;
-  height: 30px;
-  background-color: #4C164E;
-  transition: background-color 250ms ease;
-  border-radius: 10px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.close-modal-btn:hover {
-    background-color: #DDA0DD;
-  }
-  
-  .modal-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .modal-input {
-    border: 2px solid #8A2BE2;
-    border-radius: 5px;
-    padding: 10px;
-    transition: border 250ms ease;
-  }
-  
-  .modal-input:hover{
-    border: 2px solid #DDA0DD;
-  }
-
-  .modal-input:focus{
-    border: 2px solid #DDA0DD;
-  }
-
-
-  .form-btns{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .google-modal, .modal-link {
-    background-color: #4C164E;
-    color: #FFF;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .google-modal:hover, .modal-link:hover {
-    background-color: #DDA0DD;
-  }
-
-  .walet-modal-title{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 8px;
-   border-bottom: 1px solid #DDA0DD;
-   margin-bottom: 10px; 
-  }
-
-  .wallets-selection{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .metamask-btn, .other-wallets-btn {
-    background-color: #4C164E;
-    color: #FFF;
-    padding: 10px 20px;
-    border-radius: 5px;
- 
-    transition: background-color 0.3s ease;
-  }
-  
-  .metamask-btn:hover, .other-wallets-btn:hover {
-    background-color: #DDA0DD;
-  }
