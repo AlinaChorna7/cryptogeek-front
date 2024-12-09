@@ -1,4 +1,4 @@
-
+import './hero.css';
 
 
 export const Hero = ()=>{
@@ -14,7 +14,8 @@ export const Hero = ()=>{
                 <p className="hero-p"> Bite-sized learning you can apply straight away in real life</p>
             </div>
             <div className="hero-btns-container">
-                <button className=""></button>
+                <button className="hero-button-start">Start learning</button>
+                <button className="hero-button-explore">Explore feed</button>
             </div>
         </div>
     )
